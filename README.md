@@ -1,8 +1,8 @@
-# 本地工作台 · 插件市场
+# Xwork · 插件市场
 
-这是「本地工作台」（Local Workbench）的**在线插件市场**数据仓库，通过 GitHub 托管分发。
+这是「Xwork」的**在线插件市场**数据仓库，通过 GitHub 托管分发。
 
-本地工作台程序从本仓库拉取插件索引并下载插件包，无需自建服务器。
+Xwork 程序从本仓库拉取插件索引并下载插件包，无需自建服务器。
 
 ## 目录结构
 
@@ -19,19 +19,19 @@
 
 ```json
 {
-  "generated_by": "local-workbench",
+  "generated_by": "xwork",
   "plugins": [
     {
-      "id": "local.page-demo",          // 唯一，须与插件 manifest.json 的 id 一致
+      "id": "xwork.page-demo",          // 唯一，须与插件 manifest.json 的 id 一致
       "name": "页面示例",                // 展示名
       "version": "1.0.0",               // 语义化版本
       "description": "...",             // 描述（市场列表与详情页展示）
       "category": "示例",               // 分类（市场页按此分组/筛选）
-      "author": "local-workbench",      // 可选，作者
+      "author": "xwork",      // 可选，作者
       "homepage": "",                   // 可选，主页
       "permissions": ["fs.read"],       // 请求的权限（仅展示；真实授权仍在本机单独确认）
       "min_app": "1.7.0",               // 可选，最低主程序版本
-      "download": "plugins/local.page-demo/local.page-demo-1.0.0.zip",  // 相对本仓库根
+      "download": "plugins/xwork.page-demo/xwork.page-demo-1.0.0.zip",  // 相对本仓库根
       "sha256": "c569...",              // zip 文件的 SHA-256（安装时强校验）
       "size": 4969                      // 可选，zip 字节数
     }
