@@ -1,0 +1,19 @@
+{
+  "generated_by": "local-workbench",
+  "plugins": [
+    {
+      "id": "local.page-demo",
+      "name": "页面示例",
+      "version": "1.0.0",
+      "description": "演示「插件页面 + 事件钩子 + 自配置」的最小样板：页面在壳内 iframe 渲染，保存文件后页面计数会变。可照着改成自己的工具页。",
+      "category": "示例",
+      "author": "local-workbench",
+      "homepage": "",
+      "permissions": [],
+      "min_app": "1.7.0",
+      "download": "plugins/local.page-demo/local.page-demo-1.0.0.zip",
+      "sha256": "c569cffc3cb8368b569fe3f3ca4c1301208a1fed4a31ef55672dd5834054b8d9",
+      "size": 4969
+    }
+  ]
+}
