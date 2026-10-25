@@ -1,22 +1,36 @@
-name: rebuild-market-index
+name: verify-market
 
-# 插件市场索引自动维护：当 plugins/ 下的 zip 或 market/index.json 有变更时，
-# 自动校验 zip 结构并重建 index.json（重算 sha256/size，保留已有元数据）。
-# 也可手动触发（workflow_dispatch）。
+# 插件市场「只校验，不改写」。
+#
+# 为什么不再自动重建索引（2026-10-25 变更）：
+# 索引已启用 Ed25519 签名，签名是对 index.json 的**字节**算的。CI 里没有私钥，
+# 一旦它重建并提交 index.json，签名立刻失效，所有客户端都会拒绝该索引。
+# 因此索引的权威版本只能在签名机上产出：本地 rebuild → 本地签名 → 推送。
+#
+# 本工作流做三件事，任一失败就红灯：
+#   1. 每个 zip 的 sha256/size 与 index.json 一致；
+#   2. market/index.json.sig 存在且公钥在受信列表内；
+#   3. index.json 的字节验签通过。
 
 on:
   push:
     paths:
       - "plugins/**"
       - "market/index.json"
+      - "market/index.json.sig"
       - "tools/rebuild_index.py"
+      - "tools/verify_market.py"
+  pull_request:
+    paths:
+      - "plugins/**"
+      - "market/**"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  rebuild:
+  verify:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -27,17 +41,5 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Rebuild index
-        run: python tools/rebuild_index.py
-
-      - name: Commit updated index
-        run: |
-          git config user.name "xwork-market-bot"
-          git config user.email "actions@users.noreply.github.com"
-          git add market/index.json
-          if git diff --cached --quiet; then
-            echo "index.json 无变化，跳过提交"
-          else
-            git commit -m "chore: rebuild market index"
-            git push
-          fi
+      - name: Verify index & signature
+        run: python tools/verify_market.py

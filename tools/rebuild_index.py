@@ -1,4 +1,4 @@
-"""市场索引维护脚本：扫描 plugins/*/<id>-<version>.zip，校验 zip 结构并重建 index.json。
+"""市场索引维护脚本（与项目侧 tools/rebuild_index.py 同源，改一处须同步）：扫描 plugins/*/<id>-<version>.zip，校验 zip 结构并重建 index.json。
 
 给 GitHub Actions（.github/workflows/release.yml）调用，也供维护者本地手动跑：
     python tools/rebuild_index.py
@@ -104,8 +104,11 @@ def main() -> int:
     entries.sort(key=lambda e: e["id"])
     out = {"generated_by": "xwork", "plugins": entries}
     INDEX_PATH.parent.mkdir(parents=True, exist_ok=True)
+    # newline="\n" 是必须的（2026-10-25 踩过）：Windows 下默认会把 "\n" 写成 CRLF，
+    # 而 git 按 autocrlf 把 CRLF 存成 LF，于是"本地签名的字节"和"远程给出的字节"
+    # 差 67 个 \r → 索引签名永远验不过，且报错只会说"签名无效"，极难定位。
     INDEX_PATH.write_text(json.dumps(out, ensure_ascii=False, indent=2) + "\n",
-                          encoding="utf-8")
+                          encoding="utf-8", newline="\n")
 
     print(f"重建完成：{len(entries)} 个插件")
     for e in errors:
