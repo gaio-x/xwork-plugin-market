@@ -14,7 +14,7 @@
       "size": 1431,
       "category": "文件处理",
       "author": "xwork",
-      "min_app": "1.10.0"
+      "min_app": "0.0.1"
     },
     {
       "id": "xwork.md-tools",
@@ -30,7 +30,7 @@
       "size": 3011,
       "category": "示例",
       "author": "xwork",
-      "min_app": "1.10.0"
+      "min_app": "0.0.1"
     },
     {
       "id": "xwork.page-demo",
@@ -41,11 +41,11 @@
         "ui.inject"
       ],
       "download": "plugins/xwork.page-demo/xwork.page-demo-1.1.0.zip",
-      "sha256": "0afa1a10bb1adac46c3e68dfe31a56732ff39ecb299f24f9bce3c083fd351ee5",
-      "size": 6550,
+      "sha256": "cc1d9f8c034196c4d34a6173fe6408e8f52017da0caa2c6e88f3b5f5931d4792",
+      "size": 6551,
       "category": "示例",
       "author": "xwork",
-      "min_app": "1.10.0"
+      "min_app": "0.0.1"
     },
     {
       "id": "xwork.text-tools",
@@ -61,7 +61,7 @@
       "size": 2551,
       "category": "文本处理",
       "author": "xwork",
-      "min_app": "1.10.0"
+      "min_app": "0.0.1"
     }
   ]
 }
