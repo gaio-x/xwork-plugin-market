@@ -2,18 +2,66 @@
   "generated_by": "xwork",
   "plugins": [
     {
-      "id": "xwork.page-demo",
-      "name": "页面示例",
-      "version": "1.0.0",
-      "description": "演示「插件页面 + 事件钩子」的最小样板：页面在壳内 iframe 渲染，保存文件后页面上的计数会变。可以照这个结构改成自己的工具页。",
+      "id": "xwork.file-hash",
+      "name": "文件哈希",
+      "version": "1.1.0",
+      "description": "计算文件 MD5 / SHA1 / SHA256 摘要。网络运维常用：校验配置包、固件、补丁的完整性，确认传输未损坏或未被篡改。",
+      "permissions": [
+        "fs.read"
+      ],
+      "download": "plugins/xwork.file-hash/xwork.file-hash-1.1.0.zip",
+      "sha256": "6551ea7c4088faf14c3cf64fa570b92c387b4e5fa2f3ab2310cb41652d8bebf2",
+      "size": 1431,
+      "category": "文件处理",
+      "author": "xwork",
+      "min_app": "1.10.0"
+    },
+    {
+      "id": "xwork.md-tools",
+      "name": "Markdown 小工具",
+      "version": "1.1.0",
+      "description": "示例插件：统计字数、导出 HTML、首页统计卡片。演示「命令 / 文件动作 / 首页卡片」三种扩展点与权限闸门。",
+      "permissions": [
+        "fs.read",
+        "fs.write"
+      ],
+      "download": "plugins/xwork.md-tools/xwork.md-tools-1.1.0.zip",
+      "sha256": "c44a2f12fe68a826561bfeff0088c409a21ad4e51821c45d9d1e2d09ef1d0818",
+      "size": 3011,
       "category": "示例",
       "author": "xwork",
-      "homepage": "",
-      "permissions": [],
-      "min_app": "1.7.0",
-      "download": "plugins/xwork.page-demo/xwork.page-demo-1.0.0.zip",
-      "sha256": "e6757a18aeed4f7cdfb1067f2ac57a05bcb62002935bf1b1f9ffaa0e8af681cd",
-      "size": 4970
+      "min_app": "1.10.0"
+    },
+    {
+      "id": "xwork.page-demo",
+      "name": "页面示例",
+      "version": "1.1.0",
+      "description": "演示 v2 扩展点的样板：插件页面 + 页面内嵌面板 + 工具栏按钮 + 自有接口 + 事件钩子。可以照这个结构改成自己的工具页。",
+      "permissions": [
+        "ui.inject"
+      ],
+      "download": "plugins/xwork.page-demo/xwork.page-demo-1.1.0.zip",
+      "sha256": "0afa1a10bb1adac46c3e68dfe31a56732ff39ecb299f24f9bce3c083fd351ee5",
+      "size": 6550,
+      "category": "示例",
+      "author": "xwork",
+      "min_app": "1.10.0"
+    },
+    {
+      "id": "xwork.text-tools",
+      "name": "文本工具",
+      "version": "1.1.0",
+      "description": "文本处理：编码检测、行数/字数统计、Base64 编解码、JSON 格式化、按行去重。文件页右键对 .txt/.log/.json/.md 等文本文件可用。",
+      "permissions": [
+        "fs.read",
+        "fs.write"
+      ],
+      "download": "plugins/xwork.text-tools/xwork.text-tools-1.1.0.zip",
+      "sha256": "3784b2afd6aae15395536ecc08e4cd03ba3ee943e8684667a6f0ba8c400dadb3",
+      "size": 2551,
+      "category": "文本处理",
+      "author": "xwork",
+      "min_app": "1.10.0"
     }
   ]
 }
