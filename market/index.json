@@ -11,8 +11,8 @@
         "fs.write"
       ],
       "download": "plugins/xwork.bg-image/xwork.bg-image-1.0.0.zip",
-      "sha256": "b728ff745ce630d61977ef86477018987b7ff7a6c8800c8bd1b70cb170c438cc",
-      "size": 32585
+      "sha256": "1b883b7038621c3f0191d5a31feb97b4e037f9cc6d02baaf4e77393355c7ba62",
+      "size": 38453
     },
     {
       "id": "xwork.file-hash",
