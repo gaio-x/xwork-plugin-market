@@ -5,14 +5,14 @@
       "id": "xwork.bg-image",
       "name": "壁纸",
       "version": "1.0.0",
-      "description": "更换软件界面的背景图：内置 8 套纯 CSS 渐变壁纸，也可以指定本地图片，并可调整遮罩浓度。通过 ui.inject_global 向主界面注入一条样式与一段脚本，改完即生效、无需重启。",
+      "description": "更换软件界面的背景：内置 8 套纯 CSS 渐变壁纸，也可以上传自己的图片或视频（可裁剪后保存），并可调整遮罩浓度与铺满方式。图片与视频以原文件/裁剪结果落盘保存，删除壁纸时同步删除对应文件。通过 ui.inject_global 向主界面注入一条样式与一段脚本，改完即生效、无需重启。",
       "permissions": [
         "ui.inject_global",
-        "fs.read"
+        "fs.write"
       ],
       "download": "plugins/xwork.bg-image/xwork.bg-image-1.0.0.zip",
-      "sha256": "492d80344138e03841e815378ee76e839158298f2a647f6abeb4acfe7c771540",
-      "size": 18118
+      "sha256": "b728ff745ce630d61977ef86477018987b7ff7a6c8800c8bd1b70cb170c438cc",
+      "size": 32585
     },
     {
       "id": "xwork.file-hash",
