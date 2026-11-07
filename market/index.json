@@ -2,19 +2,6 @@
   "generated_by": "xwork",
   "plugins": [
     {
-      "id": "xwork.bg-image",
-      "name": "壁纸",
-      "version": "1.0.0",
-      "description": "更换软件界面的背景：内置 8 套纯 CSS 渐变壁纸，也可以上传自己的图片或视频（可裁剪后保存），并可调整遮罩浓度与铺满方式。图片与视频以原文件/裁剪结果落盘保存，删除壁纸时同步删除对应文件。通过 ui.inject_global 向主界面注入一条样式与一段脚本，改完即生效、无需重启。",
-      "permissions": [
-        "ui.inject_global",
-        "fs.write"
-      ],
-      "download": "plugins/xwork.bg-image/xwork.bg-image-1.0.0.zip",
-      "sha256": "d7b7b625d43a1db494ea64c2781e0eb919eb679d5bdfccd2fce5bc6bbe3f5b23",
-      "size": 44454
-    },
-    {
       "id": "xwork.file-hash",
       "name": "文件哈希",
       "version": "1.0.0",
@@ -27,7 +14,7 @@
       "size": 2691,
       "category": "文件处理",
       "author": "xwork",
-      "min_app": "0.0.1"
+      "min_app": "0.1.0"
     },
     {
       "id": "xwork.md-tools",
@@ -43,7 +30,7 @@
       "size": 4414,
       "category": "示例",
       "author": "xwork",
-      "min_app": "0.0.1"
+      "min_app": "0.1.0"
     },
     {
       "id": "xwork.page-demo",
@@ -54,17 +41,17 @@
         "ui.inject"
       ],
       "download": "plugins/xwork.page-demo/xwork.page-demo-1.0.0.zip",
-      "sha256": "e21b8c5ae1054d387b0c2356d52729669358ef913459f986f44335883179defa",
-      "size": 8146,
+      "sha256": "35c9632966496909261aca3cbeea29b2cbba16b45fe51e348c912f79dec34439",
+      "size": 11299,
       "category": "示例",
       "author": "xwork",
-      "min_app": "0.0.1"
+      "min_app": "0.1.0"
     },
     {
       "id": "xwork.seam-demo",
       "name": "能力缝演示",
       "version": "1.0.0",
-      "description": "演示插件：用「能力缝」接管文件预览、文本抽取、分块、检索重排、AI 调用、内容护栏、自定义探测、启动类型、内置命令与界面主题。默认不启用；启用后软件行为会明显变化，看完请停用。",
+      "description": "演示插件：覆盖宿主全部 18 个「能力缝」——文件预览与抽取、批量与索引、知识库分块/重排/回答后处理、笔记解析/渲染/反链排序、AI 模型与护栏、自定义探测、启动类型、内置命令、主题变量、界面徽标与托盘菜单。默认不启用；启用后软件行为会明显变化，看完请停用。",
       "permissions": [
         "fs.read",
         "fs.write",
@@ -78,8 +65,11 @@
         "command.provide"
       ],
       "download": "plugins/xwork.seam-demo/xwork.seam-demo-1.0.0.zip",
-      "sha256": "04522107642896308f8d55dcd6805df5e55d4fe249552daa3f707f8d4faca57f",
-      "size": 8340
+      "sha256": "f345024325eab625a51820bd19d21503a927837ba4c2c2c9de714acce586972b",
+      "size": 15002,
+      "min_app": "0.1.0",
+      "author": "xwork",
+      "category": "示例"
     },
     {
       "id": "xwork.text-tools",
@@ -95,7 +85,7 @@
       "size": 4024,
       "category": "文本处理",
       "author": "xwork",
-      "min_app": "0.0.1"
+      "min_app": "0.1.0"
     }
   ]
 }
